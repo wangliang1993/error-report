@@ -20,9 +20,8 @@ export default {
     exclude: "node_modules/**"
   },
   output: {
-    file: isDev
-      ? "../website/client/js/error-report-sdk/bundle.umd.js"
-      : "../dist/bundle.umd.js",
+    file: isDev ?
+      "../website/client/js/error-report-sdk/bundle.umd.js" : "../dist/bundle.umd.js",
     name: "ErrorReport",
     format: "umd",
     sourceMap: true

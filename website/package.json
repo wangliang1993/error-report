@@ -13,5 +13,8 @@
   "dependencies": {
     "koa": "^2.11.0",
     "koa-static": "^5.0.0"
+  },
+  "devDependencies": {
+    "source-map": "^0.7.3"
   }
 }

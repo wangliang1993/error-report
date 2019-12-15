@@ -1,13 +1,52 @@
 import perf from "./perf";
-perf.init((perfData) => {
-    // 获取
-    let performance = window.performance
-    console.log(performance.timing)
-    console.log("perf init");
-    console.log(perfData);
-});
+import resource from "./resource";
+import xhrHook from "./xhrHook";
+import errorCatch from "./errorCatch";
+import beh from "./beh";
 
-console.log("h1 123");
+// 统计代理
+// var Count = (function () {
+//     var img = new Image();
+//     // 返回统计函数
+//     return function (param) {
+//         // 请求统计字符串
+//         var str = 'http:// www.count.com/a.gif?';
+//         // 拼接请求字符串
+//         for (var i in param) {
+//             str += i + '=' + param[i];
+//         }
+//         // 发送统计请求
+//         img.src = str;
+//     }
+// })()
+
+// perf.init((perfData) => {
+//     // 获取
+//     let performance = window.performance
+//     console.log(performance.timing)
+//     console.log("perf init");
+//     console.log(perfData);
+// });
+
+// resource.init((resourceData) => {
+//     console.log('resource init', resourceData)
+// })
+
+// xhrHook.init((xhrHookData) => {
+//     console.log(xhrHookData.type, xhrHookData)
+// })
+
+beh.init((behData) => {
+    console.log(behData)
+})
+
+errorCatch.init((errorData) => {
+    console.log(errorData)
+})
+
+aa
+
+// console.log("h1 123");
 
 // navigationStart: 1575947985491   前一个网页卸载的时间    默认值：fetchStart
 // unloadEventStart: 1575947985519  前一个网页unload事件开始时间   默认值：0
